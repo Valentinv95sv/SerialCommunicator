@@ -45,7 +45,7 @@ namespace SerialCommunication {
 		public SerialPortInfo[] GetPortNames() {
 			List<SerialPortInfo> portNames = new List<SerialPortInfo>();
 			try {
-				ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_SerialPort");
+				ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_PnPEntity WHERE ClassGuid=\"{4d36e978-e325-11ce-bfc1-08002be10318}\"");
 				foreach (ManagementObject queryObj in searcher.Get()) {
 					portNames.Add(new SerialPortInfo() {
 						DeviceID = (string)queryObj["DeviceID"],

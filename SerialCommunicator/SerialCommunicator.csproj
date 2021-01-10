@@ -51,6 +51,7 @@
     <Content Include="bin\Debug\SerialCommunicator.pdb" />
     <Content Include="bin\Release\SerialCommunicator.dll" />
     <Content Include="bin\Release\SerialCommunicator.pdb" />
+    <Content Include="NewFile1.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
